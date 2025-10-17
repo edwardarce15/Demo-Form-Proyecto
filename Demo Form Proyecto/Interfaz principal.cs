@@ -36,5 +36,10 @@ namespace Demo_Form_Proyecto
         {
 
         }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
