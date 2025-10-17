@@ -113,6 +113,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -234,6 +235,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.label30);
             this.panel1.Controls.Add(this.textBox13);
             this.panel1.Controls.Add(this.label29);
@@ -420,9 +422,9 @@
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(226, 166);
+            this.panel2.Location = new System.Drawing.Point(1143, 166);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(949, 468);
+            this.panel2.Size = new System.Drawing.Size(32, 468);
             this.panel2.TabIndex = 16;
             this.panel2.Visible = false;
             // 
@@ -467,9 +469,9 @@
             this.panel4.Controls.Add(this.listView4);
             this.panel4.Controls.Add(this.textBox8);
             this.panel4.Controls.Add(this.label21);
-            this.panel4.Location = new System.Drawing.Point(22, 0);
+            this.panel4.Location = new System.Drawing.Point(26, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(908, 468);
+            this.panel4.Size = new System.Drawing.Size(904, 468);
             this.panel4.TabIndex = 29;
             // 
             // panel5
@@ -484,9 +486,9 @@
             this.panel5.Controls.Add(this.textBox16);
             this.panel5.Controls.Add(this.textBox15);
             this.panel5.Controls.Add(this.textBox14);
-            this.panel5.Location = new System.Drawing.Point(23, 0);
+            this.panel5.Location = new System.Drawing.Point(26, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(885, 468);
+            this.panel5.Size = new System.Drawing.Size(882, 468);
             this.panel5.TabIndex = 17;
             // 
             // label35
@@ -959,6 +961,16 @@
             this.textBox3.Size = new System.Drawing.Size(611, 26);
             this.textBox3.TabIndex = 0;
             // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(617, 142);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(182, 61);
+            this.button12.TabIndex = 17;
+            this.button12.Text = "Generar";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
             // Interfaz_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1085,5 +1097,6 @@
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button12;
     }
 }
