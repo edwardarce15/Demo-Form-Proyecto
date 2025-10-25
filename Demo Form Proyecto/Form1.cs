@@ -12,6 +12,10 @@ namespace Demo_Form_Proyecto
 {
     public partial class Form1 : Form
     {
+        private void ocultarpanel()
+        {
+
+        }
         public Form1()
         {
             InitializeComponent();

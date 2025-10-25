@@ -39,6 +39,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -113,7 +114,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -252,11 +252,21 @@
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Location = new System.Drawing.Point(209, 166);
+            this.panel1.Location = new System.Drawing.Point(194, 219);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(966, 468);
+            this.panel1.Size = new System.Drawing.Size(972, 468);
             this.panel1.TabIndex = 11;
             this.panel1.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(617, 142);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(182, 61);
+            this.button12.TabIndex = 17;
+            this.button12.Text = "Generar";
+            this.button12.UseVisualStyleBackColor = true;
             // 
             // label30
             // 
@@ -408,7 +418,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
@@ -422,15 +431,14 @@
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(1143, 166);
+            this.panel2.Location = new System.Drawing.Point(214, 204);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(32, 468);
+            this.panel2.Size = new System.Drawing.Size(952, 468);
             this.panel2.TabIndex = 16;
             this.panel2.Visible = false;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.listView3);
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.button4);
@@ -443,14 +451,13 @@
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(19, 0);
+            this.panel3.Location = new System.Drawing.Point(236, 186);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(930, 468);
             this.panel3.TabIndex = 16;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.button11);
             this.panel4.Controls.Add(this.button10);
             this.panel4.Controls.Add(this.label28);
@@ -469,9 +476,9 @@
             this.panel4.Controls.Add(this.listView4);
             this.panel4.Controls.Add(this.textBox8);
             this.panel4.Controls.Add(this.label21);
-            this.panel4.Location = new System.Drawing.Point(26, 0);
+            this.panel4.Location = new System.Drawing.Point(258, 169);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(904, 468);
+            this.panel4.Size = new System.Drawing.Size(908, 468);
             this.panel4.TabIndex = 29;
             // 
             // panel5
@@ -486,9 +493,9 @@
             this.panel5.Controls.Add(this.textBox16);
             this.panel5.Controls.Add(this.textBox15);
             this.panel5.Controls.Add(this.textBox14);
-            this.panel5.Location = new System.Drawing.Point(26, 0);
+            this.panel5.Location = new System.Drawing.Point(281, 149);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(882, 468);
+            this.panel5.Size = new System.Drawing.Size(885, 468);
             this.panel5.TabIndex = 17;
             // 
             // label35
@@ -961,22 +968,15 @@
             this.textBox3.Size = new System.Drawing.Size(611, 26);
             this.textBox3.TabIndex = 0;
             // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(617, 142);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(182, 61);
-            this.button12.TabIndex = 17;
-            this.button12.Text = "Generar";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
             // Interfaz_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1232, 688);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.panel1);
