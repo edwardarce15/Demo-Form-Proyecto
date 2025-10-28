@@ -15,6 +15,26 @@ namespace Demo_Form_Proyecto
         public Interfaz_principal()
         {
             InitializeComponent();
+            panel1.Visible = true;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+        }
+
+        public void ocultar_panel()
+        {
+            panel1.Parent = this;
+            panel2.Parent = this;
+            panel3.Parent = this;
+            panel4.Parent = this;
+            panel5.Parent = this;
+
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,7 +49,10 @@ namespace Demo_Form_Proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
+            ocultar_panel();
             panel1.Visible = true;
+            panel1.BringToFront();
+            Dock= DockStyle.Fill;
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -44,7 +67,42 @@ namespace Demo_Form_Proyecto
 
         private void button6_Click(object sender, EventArgs e)
         {
+            ocultar_panel();
+            panel2.Visible = true;
+            panel2.BringToFront();
+            Dock= DockStyle.Fill;
+        }
+
+        private void Interfaz_principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ocultar_panel();
             panel3.Visible = true;
+            panel3.BringToFront();
+            Dock = DockStyle.Fill;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ocultar_panel();
+            panel4.Visible = true;
+            panel4.BringToFront();
+            Dock = DockStyle.Fill;
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ocultar_panel();
+            panel5.Visible = true;
+            panel5.BringToFront();
+            Dock = DockStyle.Fill;
+
         }
     }
 }
