@@ -41,5 +41,10 @@ namespace Demo_Form_Proyecto
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            panel3.Show();
+        }
     }
 }
