@@ -638,9 +638,9 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(36, 100);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 16);
+            this.label20.Size = new System.Drawing.Size(122, 16);
             this.label20.TabIndex = 25;
-            this.label20.Text = "ID Alumno";
+            this.label20.Text = "Numero de Alumno";
             // 
             // textBox5
             // 
@@ -1031,10 +1031,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1095, 550);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
