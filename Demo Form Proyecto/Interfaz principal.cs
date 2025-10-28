@@ -75,7 +75,7 @@ namespace Demo_Form_Proyecto
 
         private void Interfaz_principal_Load(object sender, EventArgs e)
         {
-
+            textBox16.UseSystemPasswordChar = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -103,6 +103,23 @@ namespace Demo_Form_Proyecto
             panel5.BringToFront();
             Dock = DockStyle.Fill;
 
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox16.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox16.UseSystemPasswordChar = true;
+            }
         }
     }
 }

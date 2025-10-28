@@ -946,6 +946,7 @@
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "Mostrar Contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label34
             // 
@@ -1004,6 +1005,7 @@
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(174, 23);
             this.textBox16.TabIndex = 2;
+            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
             // textBox15
             // 
