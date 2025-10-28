@@ -37,5 +37,31 @@ namespace Demo_Form_Proyecto
             Interfaz_principal Interf = new Interfaz_principal();
             Interf.Show();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                textBox2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+            }
+        }
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = true;
+        }
     }
 }
