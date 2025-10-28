@@ -252,7 +252,7 @@
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Location = new System.Drawing.Point(194, 219);
+            this.panel1.Location = new System.Drawing.Point(193, 219);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(972, 468);
             this.panel1.TabIndex = 11;
@@ -431,7 +431,7 @@
             this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(214, 204);
+            this.panel2.Location = new System.Drawing.Point(213, 204);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(952, 468);
             this.panel2.TabIndex = 16;
@@ -451,7 +451,7 @@
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(236, 186);
+            this.panel3.Location = new System.Drawing.Point(235, 186);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(930, 468);
             this.panel3.TabIndex = 16;
@@ -476,7 +476,7 @@
             this.panel4.Controls.Add(this.listView4);
             this.panel4.Controls.Add(this.textBox8);
             this.panel4.Controls.Add(this.label21);
-            this.panel4.Location = new System.Drawing.Point(258, 169);
+            this.panel4.Location = new System.Drawing.Point(257, 169);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(908, 468);
             this.panel4.TabIndex = 29;
@@ -493,7 +493,7 @@
             this.panel5.Controls.Add(this.textBox16);
             this.panel5.Controls.Add(this.textBox15);
             this.panel5.Controls.Add(this.textBox14);
-            this.panel5.Location = new System.Drawing.Point(281, 149);
+            this.panel5.Location = new System.Drawing.Point(280, 149);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(885, 468);
             this.panel5.TabIndex = 17;
