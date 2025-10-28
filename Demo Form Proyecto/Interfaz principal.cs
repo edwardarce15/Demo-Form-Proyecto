@@ -76,6 +76,7 @@ namespace Demo_Form_Proyecto
         private void Interfaz_principal_Load(object sender, EventArgs e)
         {
             textBox16.UseSystemPasswordChar = true;
+            textBox17.UseSystemPasswordChar = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -115,10 +116,12 @@ namespace Demo_Form_Proyecto
             if (checkBox1.Checked)
             {
                 textBox16.UseSystemPasswordChar = false;
+                textBox17.UseSystemPasswordChar = false;
             }
             else
             {
                 textBox16.UseSystemPasswordChar = true;
+                textBox17.UseSystemPasswordChar = true;
             }
         }
     }
