@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -78,6 +79,9 @@ namespace Demo_Form_Proyecto
 
         private void Interfaz_principal_Load(object sender, EventArgs e)
         {
+            Clsconexion c = new Clsconexion();
+
+            
             textBox16.UseSystemPasswordChar = true;
             try
             {
@@ -95,8 +99,8 @@ namespace Demo_Form_Proyecto
         private void button2_Click(object sender, EventArgs e)
         {
             ocultar_panel();
-            panel3.Visible = true;
-            panel3.BringToFront();
+            panel4.Visible = true;
+            panel4.BringToFront();
             Dock = DockStyle.Fill;
 
         }
@@ -104,8 +108,8 @@ namespace Demo_Form_Proyecto
         private void button3_Click(object sender, EventArgs e)
         {
             ocultar_panel();
-            panel4.Visible = true;
-            panel4.BringToFront();
+            panel3.Visible = true;
+            panel3.BringToFront();
             Dock = DockStyle.Fill;
 
         }
@@ -148,11 +152,13 @@ namespace Demo_Form_Proyecto
 
         private void button7_Click(object sender, EventArgs e)
         {
+ 
             string Sql= "INSERT INTO empleado VALUES(null,'"+ textBox6.Text + "','"+ textBox3.Text + "','" + comboBox4.SelectedValue + "')";
             cone.Ejecutar(Sql);
             MessageBox.Show(Sql);
             MessageBox.Show("Se Guardo el usuario" + textBox3.Text, "LISTO!", MessageBoxButtons.OK);
 
         }
+       
     }
 }

@@ -13,11 +13,11 @@ namespace Demo_Form_Proyecto
 {
     internal class Clsconexion
     {
-        public static MySqlConnection Con;
-        public static MySqlCommand com;
-        public static MySqlDataAdapter mysqldt;
+        public MySqlConnection Con;
+        public MySqlCommand com;
+        public MySqlDataAdapter mysqldt;
         public DataTable dt = new DataTable();
-        public static DataSet Datos;
+        public DataSet Datos;
         public void Conectarse()
         {
             try
@@ -32,6 +32,7 @@ namespace Demo_Form_Proyecto
                 MessageBox.Show(ex.Message);
             }
         }
+        
         public DataTable Desplegar(string CadMySql)
         {
             try
@@ -60,8 +61,6 @@ namespace Demo_Form_Proyecto
             {
                 MessageBox.Show(ex.Message);
             }
-
-
         }
     }
 }
