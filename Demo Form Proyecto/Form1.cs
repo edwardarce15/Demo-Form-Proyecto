@@ -19,6 +19,9 @@ namespace Demo_Form_Proyecto
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.WindowState = FormWindowState.Maximized;
+            this.Size=new Size(1200,800);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -61,7 +64,9 @@ namespace Demo_Form_Proyecto
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             textBox2.UseSystemPasswordChar = true;
+
         }
     }
 }
