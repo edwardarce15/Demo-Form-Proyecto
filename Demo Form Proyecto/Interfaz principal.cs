@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Demo_Form_Proyecto
 {
     public partial class Interfaz_principal : Form
     {
+        Clsconexion cone=new Clsconexion();
         public Interfaz_principal()
         {
             InitializeComponent();
@@ -76,7 +79,8 @@ namespace Demo_Form_Proyecto
         private void Interfaz_principal_Load(object sender, EventArgs e)
         {
             textBox16.UseSystemPasswordChar = true;
-            textBox17.UseSystemPasswordChar = true;
+        }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -123,6 +127,23 @@ namespace Demo_Form_Proyecto
                 textBox16.UseSystemPasswordChar = true;
                 textBox17.UseSystemPasswordChar = true;
             }
+        }
+        private void funcion()
+        {
+            DataTable dt3 = cone.Desplegar("SELECT idFuncion, Funcion FROM funcion order BY Funcion");
+            comboBox4.ValueMember = "idFuncion";
+            comboBox4.DisplayMember = "Funcion";
+            comboBox4.DataSource = dt3;
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string Sql= "INSERT INTO empleado VALUES(null,'"+ textBox6.Text + "','"+ textBox3.Text + "','" + comboBox4.SelectedValue + "')";
+            cone.Ejecutar(Sql);
+            MessageBox.Show(Sql);
+            MessageBox.Show("Se Guardo el usuario" + textBox3.Text, "LISTO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

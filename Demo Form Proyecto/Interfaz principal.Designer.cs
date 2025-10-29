@@ -61,14 +61,11 @@
             this.label14 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.listView2 = new System.Windows.Forms.ListView();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -114,6 +111,7 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
+            this.listView2 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -443,14 +441,12 @@
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.listView2);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.comboBox4);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.textBox7);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Location = new System.Drawing.Point(189, 163);
@@ -492,34 +488,16 @@
             this.button7.TabIndex = 13;
             this.button7.Text = "Agregar";
             this.button7.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(264, 100);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 16);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "Email";
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(24, 100);
+            this.label11.Location = new System.Drawing.Point(17, 98);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 16);
+            this.label11.Size = new System.Drawing.Size(98, 16);
             this.label11.TabIndex = 11;
-            this.label11.Text = "Telefono";
-            // 
-            // listView2
-            // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(13, 157);
-            this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(818, 204);
-            this.listView2.TabIndex = 10;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.label11.Text = "NumEmpleado";
             // 
             // label12
             // 
@@ -555,14 +533,6 @@
             this.label9.Size = new System.Drawing.Size(141, 16);
             this.label9.TabIndex = 5;
             this.label9.Text = "Nombre/s y Apellido/s";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(260, 118);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(224, 22);
-            this.textBox7.TabIndex = 4;
             // 
             // textBox6
             // 
@@ -1025,6 +995,16 @@
             this.textBox14.Size = new System.Drawing.Size(174, 23);
             this.textBox14.TabIndex = 0;
             // 
+            // listView2
+            // 
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(13, 157);
+            this.listView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(818, 204);
+            this.listView2.TabIndex = 10;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
             // Interfaz_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1032,9 +1012,9 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1095, 550);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
@@ -1095,17 +1075,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -1157,5 +1134,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.ListView listView2;
     }
 }

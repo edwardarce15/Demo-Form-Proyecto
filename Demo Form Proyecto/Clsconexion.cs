@@ -14,6 +14,10 @@ namespace Demo_Form_Proyecto
     internal class Clsconexion
     {
         public static MySqlConnection Con;
+        public static MySqlCommand com;
+        public static MySqlDataAdapter mysqldt;
+        public DataTable dt = new DataTable();
+        public static DataSet Datos;
         public void Conectarse()
         {
             try
@@ -27,6 +31,37 @@ namespace Demo_Form_Proyecto
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        public DataTable Desplegar(string CadMySql)
+        {
+            try
+            {
+                Conectarse();
+                MySqlCommand cmd = new MySqlCommand(CadMySql, Con);
+                MySqlDataAdapter mysqldt = new MySqlDataAdapter(cmd);
+                mysqldt.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                    MessageBox.Show(ex.Message);
+            }
+            return dt;
+        }
+
+        public void Ejecutar(string CadMySql)
+        {
+            try
+            {
+                Conectarse();
+                MySqlCommand cmd = new MySqlCommand(CadMySql, Con);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
         }
     }
 }
