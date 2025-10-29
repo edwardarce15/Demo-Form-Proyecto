@@ -79,9 +79,18 @@ namespace Demo_Form_Proyecto
         private void Interfaz_principal_Load(object sender, EventArgs e)
         {
             textBox16.UseSystemPasswordChar = true;
-        }
+            try
+            {
+                funcion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -142,7 +151,7 @@ namespace Demo_Form_Proyecto
             string Sql= "INSERT INTO empleado VALUES(null,'"+ textBox6.Text + "','"+ textBox3.Text + "','" + comboBox4.SelectedValue + "')";
             cone.Ejecutar(Sql);
             MessageBox.Show(Sql);
-            MessageBox.Show("Se Guardo el usuario" + textBox3.Text, "LISTO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Se Guardo el usuario" + textBox3.Text, "LISTO!", MessageBoxButtons.OK);
 
         }
     }
