@@ -291,7 +291,7 @@ namespace Demo_Form_Proyecto
         private void button12_Click(object sender, EventArgs e)
         {
             Clsconexion cone = new Clsconexion();
-            string Sql = "INSERT INTO reporte VALUES(null,'" + textBox12.Text + "','" + comboBox5.SelectedValue + "','" + comboBox2.SelectedValue + "','" + comboBox1.SelectedValue + "','" + comboBox12.SelectedValue + "','" + comboBox10.SelectedValue + "','" + comboBox3.SelectedValue + "')";
+            string Sql = "INSERT INTO reporte VALUES(null,'" + textBox12.Text + "','"  + comboBox2.SelectedValue + "','" + comboBox1.SelectedValue + "','" + comboBox12.SelectedValue + "','" + comboBox10.SelectedValue + "','" + comboBox3.SelectedValue + "')";
             cone.Ejecutar(Sql);
             MessageBox.Show(Sql);
             MessageBox.Show("Reporte generado con exito" + textBox4.Text, "LISTO!", MessageBoxButtons.OK);
