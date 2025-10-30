@@ -21,7 +21,6 @@ namespace Demo_Form_Proyecto
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.WindowState = FormWindowState.Maximized;
-            this.Size=new Size(1200,800);
         }
 
         private void label2_Click(object sender, EventArgs e)
