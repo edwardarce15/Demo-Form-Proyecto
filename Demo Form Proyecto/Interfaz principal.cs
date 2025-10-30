@@ -15,7 +15,7 @@ namespace Demo_Form_Proyecto
 {
     public partial class Interfaz_principal : Form
     {
-        Clsconexion cone=new Clsconexion();
+        
         public Interfaz_principal()
         {
             InitializeComponent();
@@ -40,6 +40,7 @@ namespace Demo_Form_Proyecto
             panel4.Visible = false;
             panel5.Visible = false;
         }
+        MySqlConnection conexion = new MySqlConnection("server=69.6.201.17; database=afcbemis_SecundariaTecnica; Uid=afcbemis; pwd=isoft1106.Proyectos; ");
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -79,17 +80,32 @@ namespace Demo_Form_Proyecto
 
         private void Interfaz_principal_Load(object sender, EventArgs e)
         {
-            Clsconexion c = new Clsconexion();
-
+            Clsconexion cone = new Clsconexion();
             
             textBox16.UseSystemPasswordChar = true;
             try
             {
                 funcion();
+                User();
+                grado();
+                grupo();
+                grado2();
+                grupo2();
+                TipoFalta();
+                Templeado();
+                alumno();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+          DataTable dt = cone.Desplegar("SELECT * FROM empleado");
+            foreach (DataRow row in dt.Rows)
+            {
+                ListViewItem item = new ListViewItem(row["NumEmpleado"].ToString());
+                item.SubItems.Add(row["Nombre"].ToString());
+                item.SubItems.Add(row["Funcion_idFuncion"].ToString());
+                listView2.Items.Add(item);
             }
 
         }
@@ -143,22 +159,158 @@ namespace Demo_Form_Proyecto
         }
         private void funcion()
         {
+            Clsconexion cone = new Clsconexion();
             DataTable dt3 = cone.Desplegar("SELECT idFuncion, Funcion FROM funcion order BY Funcion");
             comboBox4.ValueMember = "idFuncion";
             comboBox4.DisplayMember = "Funcion";
             comboBox4.DataSource = dt3;
 
         }
+ 
 
         private void button7_Click(object sender, EventArgs e)
         {
- 
+            Clsconexion cone = new Clsconexion();
             string Sql= "INSERT INTO empleado VALUES(null,'"+ textBox6.Text + "','"+ textBox3.Text + "','" + comboBox4.SelectedValue + "')";
             cone.Ejecutar(Sql);
             MessageBox.Show(Sql);
             MessageBox.Show("Se Guardo el usuario" + textBox3.Text, "LISTO!", MessageBoxButtons.OK);
 
         }
-       
+
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+            Clsconexion cone = new Clsconexion();
+            string Sql = "DELETE * FROM empleado WHERE id_Empleado =" + textBox6.Text;
+            cone.Ejecutar(Sql);
+            MessageBox.Show("Se elimino el usuario");
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox11_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void User()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT idEmpleado, Nombre FROM empleado order BY Nombre");
+            comboBox11.ValueMember = "idEmpleado";
+            comboBox11.DisplayMember = "Nombre";
+            comboBox11.DataSource = dt3;
+
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if(textBox16.Text == textBox17.Text)
+            {
+                Clsconexion cone = new Clsconexion();
+                string Sql = "INSERT INTO cuenta VALUES(null,'" + textBox15.Text + "','" + textBox17.Text + "','" + comboBox11.SelectedValue + "')";
+                cone.Ejecutar(Sql);
+                MessageBox.Show(Sql);
+                MessageBox.Show("Se Guardo el usuario" + textBox16.Text, "LISTO!", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Las contraseñas no coinciden", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void grado()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT idGrado, Grado FROM grado order BY Grado");
+            comboBox5.ValueMember = "idGrado";
+            comboBox5.DisplayMember = "Grado";
+            comboBox5.DataSource = dt3;
+        }
+        private void grupo()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT idGrupo, Grupo FROM grupo order BY Grupo");
+            comboBox6.ValueMember = "idGrupo";
+            comboBox6.DisplayMember = "Grupo";
+            comboBox6.DataSource = dt3;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Clsconexion cone = new Clsconexion();
+            string Sql = "INSERT INTO alumnos VALUES(null,'" + textBox4.Text + "','" + textBox5.Text + "','" + textBox14.Text + "','" + textBox7.Text + "','" + comboBox5.SelectedValue + "','" + comboBox6.SelectedValue + "')";
+            cone.Ejecutar(Sql);
+            MessageBox.Show(Sql);
+            MessageBox.Show("Se Guardo el usuario" + textBox4.Text, "LISTO!", MessageBoxButtons.OK);
+        }
+
+        private void label13_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void grado2()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT idGrado, Grado FROM grado order BY Grado");
+            comboBox2.ValueMember = "idGrado";
+            comboBox2.DisplayMember = "Grado";
+            comboBox2.DataSource = dt3;
+        }
+        private void grupo2()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT idGrupo, Grupo FROM grupo order BY Grupo");
+            comboBox1.ValueMember = "idGrupo";
+            comboBox1.DisplayMember = "Grupo";
+            comboBox1.DataSource = dt3;
+        }
+        private void TipoFalta()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT idTipofalta, Tipodefalta FROM Tipofalta order BY Tipodefalta");
+            comboBox3.ValueMember = "idTipofalta";
+            comboBox3.DisplayMember = "Tipodefalta";
+            comboBox3.DataSource = dt3;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Clsconexion cone = new Clsconexion();
+            string Sql = "INSERT INTO reporte VALUES(null,'" + textBox12.Text + "','" + comboBox5.SelectedValue + "','" + comboBox2.SelectedValue + "','" + comboBox1.SelectedValue + "','" + comboBox12.SelectedValue + "','" + comboBox10.SelectedValue + "','" + comboBox3.SelectedValue + "')";
+            cone.Ejecutar(Sql);
+            MessageBox.Show(Sql);
+            MessageBox.Show("Reporte generado con exito" + textBox4.Text, "LISTO!", MessageBoxButtons.OK);
+        }
+        private void Templeado()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT idEmpleado, nombre FROM empleado order BY Nombre");
+            comboBox12.ValueMember = "idEmpleado";
+            comboBox12.DisplayMember = "Nombre";
+            comboBox12.DataSource = dt3;
+        }
+        private void alumno()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT idAlumnos, Nombre FROM alumnos order BY Nombre");
+            comboBox10.ValueMember = "idAlumnos";
+            comboBox10.DisplayMember = "Nombre";
+            comboBox10.DataSource = dt3;
+        }
     }
 }
