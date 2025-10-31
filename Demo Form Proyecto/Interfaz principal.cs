@@ -95,6 +95,7 @@ namespace Demo_Form_Proyecto
                 Templeado();
                 alumno();
                 Turno();
+                llenarlvAlumnos();
             }
             catch (Exception ex)
             {
@@ -312,6 +313,29 @@ namespace Demo_Form_Proyecto
             comboBox13.ValueMember = "idTurno";
             comboBox13.DisplayMember = "Turno";
             comboBox13.DataSource = dt3;
+        }
+
+        private void lVAlumnos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void llenarlvAlumnos()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT * FROM alumnos order BY Nombre");
+            lVAlumnos.Items.Clear();
+            foreach (DataRow row in dt3.Rows)
+            {
+                ListViewItem item = new ListViewItem(row["idAlumnos"].ToString());
+                item.SubItems.Add(row["Nombre"].ToString());
+                item.SubItems.Add(row["Matricula"].ToString());
+                item.SubItems.Add(row["NombreTutor"].ToString());
+                item.SubItems.Add(row["Tel_Tutor"].ToString());
+                item.SubItems.Add(row["idGrado"].ToString());
+                item.SubItems.Add(row["idGrupo"].ToString());
+                item.SubItems.Add(row["turno_idTurno"].ToString());
+                lVAlumnos.Items.Add(item);
+            }
         }
     }
 }

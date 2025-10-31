@@ -119,7 +119,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.lVAlumnos = new System.Windows.Forms.ListView();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -1091,15 +1091,16 @@
             this.button9.Text = "Eliminar";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // listView3
+            // lVAlumnos
             // 
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(27, 175);
-            this.listView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(566, 121);
-            this.listView3.TabIndex = 28;
-            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.lVAlumnos.HideSelection = false;
+            this.lVAlumnos.Location = new System.Drawing.Point(27, 175);
+            this.lVAlumnos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lVAlumnos.Name = "lVAlumnos";
+            this.lVAlumnos.Size = new System.Drawing.Size(566, 121);
+            this.lVAlumnos.TabIndex = 28;
+            this.lVAlumnos.UseCompatibleStateImageBehavior = false;
+            this.lVAlumnos.SelectedIndexChanged += new System.EventHandler(this.lVAlumnos_SelectedIndexChanged);
             // 
             // textBox14
             // 
@@ -1156,7 +1157,7 @@
             this.panel3.Controls.Add(this.textBox7);
             this.panel3.Controls.Add(this.label36);
             this.panel3.Controls.Add(this.textBox14);
-            this.panel3.Controls.Add(this.listView3);
+            this.panel3.Controls.Add(this.lVAlumnos);
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.label20);
@@ -1211,11 +1212,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel4);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Interfaz_principal";
             this.Text = "Inicio - Interfaz";
@@ -1319,7 +1320,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView lVAlumnos;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox textBox7;
