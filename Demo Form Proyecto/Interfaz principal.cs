@@ -94,18 +94,11 @@ namespace Demo_Form_Proyecto
                 TipoFalta();
                 Templeado();
                 alumno();
+                Turno();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-          DataTable dt = cone.Desplegar("SELECT * FROM empleado");
-            foreach (DataRow row in dt.Rows)
-            {
-                ListViewItem item = new ListViewItem(row["NumEmpleado"].ToString());
-                item.SubItems.Add(row["Nombre"].ToString());
-                item.SubItems.Add(row["Funcion_idFuncion"].ToString());
-                listView2.Items.Add(item);
             }
 
         }
@@ -248,10 +241,10 @@ namespace Demo_Form_Proyecto
         private void button4_Click(object sender, EventArgs e)
         {
             Clsconexion cone = new Clsconexion();
-            string Sql = "INSERT INTO alumnos VALUES(null,'" + textBox4.Text + "','" + textBox5.Text + "','" + textBox14.Text + "','" + textBox7.Text + "','" + comboBox5.SelectedValue + "','" + comboBox6.SelectedValue + "')";
+            string Sql = "INSERT INTO alumnos VALUES(null,'" + textBox4.Text + "','" + textBox5.Text + "','" + textBox14.Text + "','" + textBox7.Text + "','" + comboBox5.SelectedValue + "','" + comboBox6.SelectedValue + "','" + comboBox13.SelectedValue + "')";
             cone.Ejecutar(Sql);
             MessageBox.Show(Sql);
-            MessageBox.Show("Se Guardo el usuario" + textBox4.Text, "LISTO!", MessageBoxButtons.OK);
+            MessageBox.Show("Se Guardo el ALUMNO " + textBox4.Text, "LISTO!", MessageBoxButtons.OK);
         }
 
         private void label13_Click_1(object sender, EventArgs e)
@@ -311,6 +304,14 @@ namespace Demo_Form_Proyecto
             comboBox10.ValueMember = "idAlumnos";
             comboBox10.DisplayMember = "Nombre";
             comboBox10.DataSource = dt3;
+        }
+        private void Turno()
+        {
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT idTurno, Turno FROM turno order BY Turno");
+            comboBox13.ValueMember = "idTurno";
+            comboBox13.DisplayMember = "Turno";
+            comboBox13.DataSource = dt3;
         }
     }
 }
