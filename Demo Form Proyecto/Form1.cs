@@ -12,6 +12,7 @@ namespace Demo_Form_Proyecto
 {
     public partial class Form1 : Form
     {
+        private string Nomuser;
         private void ocultarpanel()
         {
 
@@ -35,8 +36,6 @@ namespace Demo_Form_Proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
 
             this.Hide();
             Interfaz_principal Interf = new Interfaz_principal();
@@ -71,5 +70,7 @@ namespace Demo_Form_Proyecto
             textBox2.UseSystemPasswordChar = true;
 
         }
+
+
     }
 }

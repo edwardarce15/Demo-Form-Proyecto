@@ -22,7 +22,6 @@ namespace Demo_Form_Proyecto
             panel1.Visible = true;
             panel2.Visible = false;
             panel3.Visible = false;
-            panel4.Visible = false;
             panel5.Visible = false;
         }
 
@@ -31,13 +30,11 @@ namespace Demo_Form_Proyecto
             panel1.Parent = this;
             panel2.Parent = this;
             panel3.Parent = this;
-            panel4.Parent = this;
             panel5.Parent = this;
 
             panel1.Visible = false;
             panel2.Visible = false;
             panel3.Visible = false;
-            panel4.Visible = false;
             panel5.Visible = false;
         }
         MySqlConnection conexion = new MySqlConnection("server=69.6.201.17; database=afcbemis_SecundariaTecnica; Uid=afcbemis; pwd=isoft1106.Proyectos; ");
@@ -106,14 +103,7 @@ namespace Demo_Form_Proyecto
 
 
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ocultar_panel();
-            panel4.Visible = true;
-            panel4.BringToFront();
-            Dock = DockStyle.Fill;
 
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -199,9 +189,9 @@ namespace Demo_Form_Proyecto
         private void User()
         {
             Clsconexion cone = new Clsconexion();
-            DataTable dt3 = cone.Desplegar("SELECT idEmpleado, Nombre FROM empleado order BY Nombre");
+            DataTable dt3 = cone.Desplegar("SELECT idEmpleado, NombreEmpleado FROM empleado order BY NombreEmpleado");
             comboBox11.ValueMember = "idEmpleado";
-            comboBox11.DisplayMember = "Nombre";
+            comboBox11.DisplayMember = "NombreEmpleado";
             comboBox11.DataSource = dt3;
 
 
@@ -214,7 +204,6 @@ namespace Demo_Form_Proyecto
                 Clsconexion cone = new Clsconexion();
                 string Sql = "INSERT INTO cuenta VALUES(null,'" + textBox15.Text + "','" + textBox17.Text + "','" + comboBox11.SelectedValue + "')";
                 cone.Ejecutar(Sql);
-                MessageBox.Show(Sql);
                 MessageBox.Show("Se Guardo el usuario" + textBox16.Text, "LISTO!", MessageBoxButtons.OK);
             }
             else
@@ -293,17 +282,17 @@ namespace Demo_Form_Proyecto
         private void Templeado()
         {
             Clsconexion cone = new Clsconexion();
-            DataTable dt3 = cone.Desplegar("SELECT idEmpleado, nombre FROM empleado order BY Nombre");
+            DataTable dt3 = cone.Desplegar("SELECT idEmpleado, NombreEmpleado FROM empleado order BY NombreEmpleado");
             comboBox12.ValueMember = "idEmpleado";
-            comboBox12.DisplayMember = "Nombre";
+            comboBox12.DisplayMember = "NombreEmpleado";
             comboBox12.DataSource = dt3;
         }
         private void alumno()
         {
             Clsconexion cone = new Clsconexion();
-            DataTable dt3 = cone.Desplegar("SELECT idAlumnos, Nombre FROM alumnos order BY Nombre");
+            DataTable dt3 = cone.Desplegar("SELECT idAlumnos, NombreAlumnos FROM alumnos order BY NombreAlumnos");
             comboBox10.ValueMember = "idAlumnos";
-            comboBox10.DisplayMember = "Nombre";
+            comboBox10.DisplayMember = "NombreAlumnos";
             comboBox10.DataSource = dt3;
         }
         private void Turno()
@@ -321,21 +310,39 @@ namespace Demo_Form_Proyecto
         }
         private void llenarlvAlumnos()
         {
+            lVAlumnos.View = View.Details;
+            lVAlumnos.FullRowSelect = true;
+            lVAlumnos.GridLines = true;
+
+            lVAlumnos.Columns.Add("ID", 50);
+            lVAlumnos.Columns.Add("Alumno", 150);
+            lVAlumnos.Columns.Add("Matrícula", 100);
+            lVAlumnos.Columns.Add("Tutor", 150);
+            lVAlumnos.Columns.Add("Tel. Tutor", 120);
+            lVAlumnos.Columns.Add("Grado", 70);
+            lVAlumnos.Columns.Add("Grupo", 70);
+            lVAlumnos.Columns.Add("Turno", 80);
             Clsconexion cone = new Clsconexion();
-            DataTable dt3 = cone.Desplegar("SELECT * FROM alumnos order BY Nombre");
+            DataTable dt3 = cone.Desplegar("SELECT * FROM vista_alumnos order BY NombreAlumnos");
             lVAlumnos.Items.Clear();
             foreach (DataRow row in dt3.Rows)
             {
                 ListViewItem item = new ListViewItem(row["idAlumnos"].ToString());
-                item.SubItems.Add(row["Nombre"].ToString());
+                item.SubItems.Add(row["NombreAlumnos"].ToString());
                 item.SubItems.Add(row["Matricula"].ToString());
                 item.SubItems.Add(row["NombreTutor"].ToString());
                 item.SubItems.Add(row["Tel_Tutor"].ToString());
-                item.SubItems.Add(row["idGrado"].ToString());
-                item.SubItems.Add(row["idGrupo"].ToString());
-                item.SubItems.Add(row["turno_idTurno"].ToString());
+                item.SubItems.Add(row["NombreGrado"].ToString());
+                item.SubItems.Add(row["NombreGrupo"].ToString());
+                item.SubItems.Add(row["NombreTurno"].ToString());
                 lVAlumnos.Items.Add(item);
             }
         }
+
+        private void comboBox10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+ 
     }
 }
