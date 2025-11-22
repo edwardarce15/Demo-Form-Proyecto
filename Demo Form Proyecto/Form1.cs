@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,22 +38,54 @@ namespace Demo_Form_Proyecto
         private void button1_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Interfaz_principal Interf = new Interfaz_principal();
-            Interf.Show();
+            string conexion = "server=69.6.201.17; database=afcbemis_SecundariaTecnica; Uid=afcbemis; pwd=isoft1106.Proyectos;";
+            MySqlConnection cn = new MySqlConnection(conexion);
 
+            try
+            {
+                cn.Open();
+
+
+                string query = "SELECT COUNT(*) FROM cuenta WHERE Cuenta=@Cuenta AND Contraseña=@Contraseña";
+                using (MySqlCommand cmd = new MySqlCommand(query, cn))
+                {
+                    cmd.Parameters.AddWithValue("@Cuenta", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@Contraseña", textBox2.Text);
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (count > 0)
+                    {
+                        MessageBox.Show("Bienvenido " + textBox1.Text,
+                                        "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        this.Hide();
+                        Interfaz_principal Interf = new Interfaz_principal();
+                        Interf.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show(" Cuenta o Contraseña incorrectos.",
+                                        "Error de acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-                textBox2.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textBox2.UseSystemPasswordChar = true;
-            }
+            textBox2.UseSystemPasswordChar = !checkBox1.Checked;
+
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
