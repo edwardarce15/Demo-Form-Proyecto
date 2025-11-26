@@ -343,6 +343,46 @@ namespace Demo_Form_Proyecto
         {
 
         }
- 
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                comboBox9.Visible = false;
+            }
+            else
+            {
+                comboBox9.Visible = true;
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                comboBox7.Visible = false;
+            }
+            else
+            {
+                comboBox7.Visible = true;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked)
+            {
+                comboBox8.Visible = false;
+            }
+            else
+            {
+                comboBox8.Visible = true;
+            }
+        }
     }
 }
