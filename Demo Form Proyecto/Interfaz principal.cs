@@ -30,11 +30,13 @@ namespace Demo_Form_Proyecto
             panel1.Parent = this;
             panel2.Parent = this;
             panel3.Parent = this;
+            panel4.Parent = this;
             panel5.Parent = this;
 
             panel1.Visible = false;
             panel2.Visible = false;
             panel3.Visible = false;
+            panel4.Visible = false;
             panel5.Visible = false;
         }
         MySqlConnection conexion = new MySqlConnection("server=69.6.201.17; database=afcbemis_SecundariaTecnica; Uid=afcbemis; pwd=isoft1106.Proyectos; ");
@@ -359,7 +361,7 @@ namespace Demo_Form_Proyecto
         {
             lVAlumno.View = View.Details;
             lVAlumno.FullRowSelect = true;
-            lVAlumnos.GridLines = true;
+            lVAlumno.GridLines = true;
 
             lVAlumno.Columns.Add("ID", 50);
             lVAlumno.Columns.Add("Alumno", 150);
@@ -370,11 +372,11 @@ namespace Demo_Form_Proyecto
             lVAlumno.Columns.Add("Grupo", 70);
             lVAlumno.Columns.Add("Turno", 80);
             Clsconexion cone = new Clsconexion();
-            DataTable dt3 = cone.Desplegar("SELECT * FROM vista_alumnos order BY NombreAlumnos");
-            lVAlumnos.Items.Clear();
-            foreach (DataRow row in dt3.Rows)
+            DataTable dt = cone.Desplegar("SELECT * FROM vista_alumnos order BY NombreAlumnos");
+            lVAlumno.Items.Clear();
+            foreach (DataRow row in dt.Rows)
             {
-                ListViewItem item = new ListViewItem(row["idAlumno"].ToString());
+                ListViewItem item = new ListViewItem(row["idAlumnos"].ToString());
                 item.SubItems.Add(row["NombreAlumnos"].ToString());
                 item.SubItems.Add(row["Matricula"].ToString());
                 item.SubItems.Add(row["NombreTutor"].ToString());
@@ -382,8 +384,16 @@ namespace Demo_Form_Proyecto
                 item.SubItems.Add(row["NombreGrado"].ToString());
                 item.SubItems.Add(row["NombreGrupo"].ToString());
                 item.SubItems.Add(row["NombreTurno"].ToString());
-                lVAlumnos.Items.Add(item);
+                lVAlumno.Items.Add(item);
             }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            ocultar_panel();
+            panel4.Visible = true;
+            panel4.BringToFront();
+            Dock = DockStyle.Fill;
         }
     }
 }

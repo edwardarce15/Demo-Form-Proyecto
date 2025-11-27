@@ -265,7 +265,7 @@
             this.lVAlumno.Location = new System.Drawing.Point(11, 139);
             this.lVAlumno.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.lVAlumno.Name = "lVAlumno";
-            this.lVAlumno.Size = new System.Drawing.Size(489, 159);
+            this.lVAlumno.Size = new System.Drawing.Size(761, 239);
             this.lVAlumno.TabIndex = 40;
             this.lVAlumno.UseCompatibleStateImageBehavior = false;
             this.lVAlumno.View = System.Windows.Forms.View.Details;
@@ -417,7 +417,7 @@
             this.panel2.Location = new System.Drawing.Point(171, 116);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(634, 304);
+            this.panel2.Size = new System.Drawing.Size(793, 444);
             this.panel2.TabIndex = 16;
             this.panel2.Visible = false;
             // 
@@ -548,7 +548,7 @@
             this.panel5.Location = new System.Drawing.Point(158, 125);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(590, 304);
+            this.panel5.Size = new System.Drawing.Size(766, 414);
             this.panel5.TabIndex = 17;
             // 
             // button13
@@ -859,7 +859,7 @@
             this.panel3.Location = new System.Drawing.Point(145, 135);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(620, 304);
+            this.panel3.Size = new System.Drawing.Size(781, 391);
             this.panel3.TabIndex = 16;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -995,6 +995,7 @@
             this.button10.TabIndex = 19;
             this.button10.Text = "Consultar Reporte ";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // comboBox7
             // 
@@ -1036,11 +1037,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel4);
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "Interfaz_principal";
             this.Text = "Inicio - Interfaz";
