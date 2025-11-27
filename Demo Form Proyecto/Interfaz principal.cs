@@ -82,17 +82,7 @@ namespace Demo_Form_Proyecto
             textBox16.UseSystemPasswordChar = true;
             try
             {
-                funcion();
-                User();
-                grado();
-                grupo();
-                grado2();
-                grupo2();
-                TipoFalta();
-                Templeado();
-                alumno();
-                Turno();
-                llenarlvAlumnos();
+               Actualisardb();
             }
             catch (Exception ex)
             {
@@ -274,7 +264,7 @@ namespace Demo_Form_Proyecto
         private void button12_Click(object sender, EventArgs e)
         {
             Clsconexion cone = new Clsconexion();
-            string Sql = "INSERT INTO reporte VALUES(null,'" + textBox12.Text + "','"  + comboBox2.SelectedValue + "','" + comboBox1.SelectedValue + "','" + comboBox12.SelectedValue + "','" + comboBox10.SelectedValue + "','" + comboBox3.SelectedValue + "')";
+            string Sql = "INSERT INTO reporte VALUES(null,'" + textBox12.Text + "','"  + comboBox2.SelectedValue + "','" + comboBox1.SelectedValue + "','" + comboBox12.SelectedValue + "','" + comboBox10.SelectedValue + "','" + comboBox7.SelectedValue + "')";
             cone.Ejecutar(Sql);
             MessageBox.Show(Sql);
             MessageBox.Show("Reporte generado con exito" + textBox4.Text, "LISTO!", MessageBoxButtons.OK);
@@ -349,39 +339,50 @@ namespace Demo_Form_Proyecto
 
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void Actualisardb()
         {
-            if (checkBox2.Checked)
-            {
-                comboBox9.Visible = false;
-            }
-            else
-            {
-                comboBox9.Visible = true;
-            }
+            funcion();
+            User();
+            grado();
+            grupo();
+            grado2();
+            grupo2();
+            TipoFalta();
+            Templeado();
+            alumno();
+            Turno();
+            llenarlvAlumnos();
+            llenLV1();
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        private void llenLV1()
         {
-            if (checkBox3.Checked)
-            {
-                comboBox7.Visible = false;
-            }
-            else
-            {
-                comboBox7.Visible = true;
-            }
-        }
+            lVAlumno.View = View.Details;
+            lVAlumno.FullRowSelect = true;
+            lVAlumnos.GridLines = true;
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox4.Checked)
+            lVAlumno.Columns.Add("ID", 50);
+            lVAlumno.Columns.Add("Alumno", 150);
+            lVAlumno.Columns.Add("Matrícula", 100);
+            lVAlumno.Columns.Add("Tutor", 150);
+            lVAlumno.Columns.Add("Tel. Tutor", 120);
+            lVAlumno.Columns.Add("Grado", 70);
+            lVAlumno.Columns.Add("Grupo", 70);
+            lVAlumno.Columns.Add("Turno", 80);
+            Clsconexion cone = new Clsconexion();
+            DataTable dt3 = cone.Desplegar("SELECT * FROM vista_alumnos order BY NombreAlumnos");
+            lVAlumnos.Items.Clear();
+            foreach (DataRow row in dt3.Rows)
             {
-                comboBox8.Visible = false;
-            }
-            else
-            {
-                comboBox8.Visible = true;
+                ListViewItem item = new ListViewItem(row["idAlumno"].ToString());
+                item.SubItems.Add(row["NombreAlumnos"].ToString());
+                item.SubItems.Add(row["Matricula"].ToString());
+                item.SubItems.Add(row["NombreTutor"].ToString());
+                item.SubItems.Add(row["Tel_Tutor"].ToString());
+                item.SubItems.Add(row["NombreGrado"].ToString());
+                item.SubItems.Add(row["NombreGrupo"].ToString());
+                item.SubItems.Add(row["NombreTurno"].ToString());
+                lVAlumnos.Items.Add(item);
             }
         }
     }
