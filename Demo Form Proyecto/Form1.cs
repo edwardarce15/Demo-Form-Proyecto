@@ -60,15 +60,16 @@ namespace Demo_Form_Proyecto
                                         "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                        this.Hide();
-                        Interfaz_principal Interf = new Interfaz_principal();
-                        Interf.Show();
+
                     }
                     else
                     {
                         MessageBox.Show(" Cuenta o Contraseña incorrectos.",
                                         "Error de acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    this.Hide();
+                    Interfaz_principal Interf = new Interfaz_principal();
+                    Interf.Show();
                 }
             }
             catch (Exception ex)

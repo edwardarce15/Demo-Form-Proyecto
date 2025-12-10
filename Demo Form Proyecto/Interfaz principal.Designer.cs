@@ -38,6 +38,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Genfecha = new System.Windows.Forms.DateTimePicker();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.TxtFalta = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.lVAlumno = new System.Windows.Forms.ListView();
             this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.comboBox10 = new System.Windows.Forms.ComboBox();
@@ -83,7 +88,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtMatricula = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -97,22 +102,12 @@
             this.label38 = new System.Windows.Forms.Label();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnConRep = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.LVReportes = new System.Windows.Forms.ListView();
             this.label21 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -126,7 +121,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Demo_Form_Proyecto.Properties.Resources._6522581;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 10);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(67, 64);
@@ -236,9 +231,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox12);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.comboBox7);
+            this.panel1.Controls.Add(this.Genfecha);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.TxtFalta);
+            this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Controls.Add(this.lVAlumno);
             this.panel1.Controls.Add(this.comboBox12);
             this.panel1.Controls.Add(this.comboBox10);
@@ -258,6 +255,50 @@
             this.panel1.Size = new System.Drawing.Size(810, 407);
             this.panel1.TabIndex = 11;
             this.panel1.Visible = false;
+            // 
+            // Genfecha
+            // 
+            this.Genfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Genfecha.Location = new System.Drawing.Point(632, 54);
+            this.Genfecha.Name = "Genfecha";
+            this.Genfecha.Size = new System.Drawing.Size(137, 20);
+            this.Genfecha.TabIndex = 47;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(102, 81);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(99, 15);
+            this.label24.TabIndex = 46;
+            this.label24.Text = "Falta del alumno";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(14, 84);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(74, 15);
+            this.label23.TabIndex = 45;
+            this.label23.Text = "Tipo de falta";
+            // 
+            // TxtFalta
+            // 
+            this.TxtFalta.Location = new System.Drawing.Point(102, 101);
+            this.TxtFalta.Name = "TxtFalta";
+            this.TxtFalta.Size = new System.Drawing.Size(340, 20);
+            this.TxtFalta.TabIndex = 43;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(14, 100);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(66, 21);
+            this.comboBox3.TabIndex = 42;
             // 
             // lVAlumno
             // 
@@ -427,7 +468,7 @@
             this.listView2.Location = new System.Drawing.Point(27, 150);
             this.listView2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(564, 135);
+            this.listView2.Size = new System.Drawing.Size(668, 241);
             this.listView2.TabIndex = 16;
             this.listView2.UseCompatibleStateImageBehavior = false;
             // 
@@ -737,13 +778,13 @@
             this.label19.TabIndex = 23;
             this.label19.Text = "Grupo";
             // 
-            // textBox5
+            // TxtMatricula
             // 
-            this.textBox5.Location = new System.Drawing.Point(27, 98);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(129, 20);
-            this.textBox5.TabIndex = 24;
+            this.TxtMatricula.Location = new System.Drawing.Point(27, 98);
+            this.TxtMatricula.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.TxtMatricula.Name = "TxtMatricula";
+            this.TxtMatricula.Size = new System.Drawing.Size(129, 20);
+            this.TxtMatricula.TabIndex = 24;
             // 
             // label20
             // 
@@ -777,6 +818,7 @@
             this.button9.TabIndex = 27;
             this.button9.Text = "Eliminar";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // lVAlumnos
             // 
@@ -848,7 +890,7 @@
             this.panel3.Controls.Add(this.button9);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.TxtMatricula);
             this.panel3.Controls.Add(this.label19);
             this.panel3.Controls.Add(this.comboBox6);
             this.panel3.Controls.Add(this.label18);
@@ -884,33 +926,34 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.TxtNombre);
+            this.panel4.Controls.Add(this.BtnConRep);
             this.panel4.Controls.Add(this.label22);
-            this.panel4.Controls.Add(this.comboBox3);
-            this.panel4.Controls.Add(this.listView3);
+            this.panel4.Controls.Add(this.LVReportes);
             this.panel4.Controls.Add(this.label21);
-            this.panel4.Location = new System.Drawing.Point(183, 110);
+            this.panel4.Location = new System.Drawing.Point(144, 110);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(571, 330);
+            this.panel4.Size = new System.Drawing.Size(844, 429);
             this.panel4.TabIndex = 18;
             this.panel4.Visible = false;
             // 
-            // button2
+            // BtnConRep
             // 
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(393, 103);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 42);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "Consultar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnConRep.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnConRep.Location = new System.Drawing.Point(393, 103);
+            this.BtnConRep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnConRep.Name = "BtnConRep";
+            this.BtnConRep.Size = new System.Drawing.Size(127, 42);
+            this.BtnConRep.TabIndex = 50;
+            this.BtnConRep.Text = "Consultar";
+            this.BtnConRep.UseVisualStyleBackColor = true;
+            this.BtnConRep.Click += new System.EventHandler(this.button2_Click);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(12, 96);
+            this.label22.Location = new System.Drawing.Point(70, 100);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(61, 15);
@@ -918,67 +961,23 @@
             this.label22.Text = "Nombre/s";
             this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
-            // comboBox3
+            // LVReportes
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(15, 110);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(212, 21);
-            this.comboBox3.TabIndex = 49;
-            // 
-            // listView3
-            // 
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12,
-            this.columnHeader13,
-            this.columnHeader14,
-            this.columnHeader15});
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(17, 161);
-            this.listView3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(537, 160);
-            this.listView3.TabIndex = 48;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Matricula";
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Nombre/s";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Grado";
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Grupo";
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Tipo de falta";
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Fecha";
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Generado por";
+            this.LVReportes.HideSelection = false;
+            this.LVReportes.Location = new System.Drawing.Point(40, 192);
+            this.LVReportes.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.LVReportes.Name = "LVReportes";
+            this.LVReportes.Size = new System.Drawing.Size(659, 160);
+            this.LVReportes.TabIndex = 48;
+            this.LVReportes.UseCompatibleStateImageBehavior = false;
+            this.LVReportes.View = System.Windows.Forms.View.Details;
+            this.LVReportes.SelectedIndexChanged += new System.EventHandler(this.LVReportes_SelectedIndexChanged);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(233, 15);
+            this.label21.Location = new System.Drawing.Point(244, 20);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(142, 17);
@@ -997,28 +996,12 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // comboBox7
+            // TxtNombre
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(14, 100);
-            this.comboBox7.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(66, 21);
-            this.comboBox7.TabIndex = 42;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(101, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 20);
-            this.textBox1.TabIndex = 43;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(625, 52);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(160, 20);
-            this.textBox12.TabIndex = 44;
+            this.TxtNombre.Location = new System.Drawing.Point(59, 130);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(269, 20);
+            this.TxtNombre.TabIndex = 51;
             // 
             // Interfaz_principal
             // 
@@ -1118,7 +1101,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtMatricula;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button9;
@@ -1136,20 +1119,15 @@
         private System.Windows.Forms.ComboBox comboBox13;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader columnHeader13;
-        private System.Windows.Forms.ColumnHeader columnHeader14;
-        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ListView LVReportes;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnConRep;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox TxtFalta;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DateTimePicker Genfecha;
+        private System.Windows.Forms.TextBox TxtNombre;
     }
 }
