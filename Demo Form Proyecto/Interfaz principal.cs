@@ -40,7 +40,21 @@ namespace Demo_Form_Proyecto
             panel5.Visible = false;
         }
         MySqlConnection conexion = new MySqlConnection("server=69.6.201.17; database=afcbemis_SecundariaTecnica; Uid=afcbemis; pwd=isoft1106.Proyectos; ");
-
+        private void Cleralltxtbox()
+        {
+            TxtFalta.Clear();
+            TxtMatricula.Clear();
+            TxtNombre.Clear();
+            textBox14.Clear();
+            textBox15.Clear();
+            textBox16.Clear(); 
+            textBox17.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            textBox6.Clear();
+            textBox7.Clear();
+            
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -152,6 +166,7 @@ namespace Demo_Form_Proyecto
             MessageBox.Show(Sql);
             MessageBox.Show("Se Guardo el usuario" + textBox3.Text, "LISTO!", MessageBoxButtons.OK);
             Actualisardb();
+            Cleralltxtbox();
         }
 
 
@@ -163,6 +178,7 @@ namespace Demo_Form_Proyecto
             cone.Ejecutar(Sql);
             MessageBox.Show("Se elimino el usuario");
             Actualisardb();
+            Cleralltxtbox();
         }
 
         private void textBox15_TextChanged(object sender, EventArgs e)
@@ -204,6 +220,7 @@ namespace Demo_Form_Proyecto
                 MessageBox.Show("Las contraseñas no coinciden", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Actualisardb();
+            Cleralltxtbox();
         }
         private void grado()
         {
@@ -229,6 +246,7 @@ namespace Demo_Form_Proyecto
             cone.Ejecutar(Sql);
             MessageBox.Show("Se Guardo el ALUMNO " + textBox4.Text, "LISTO!", MessageBoxButtons.OK);
             Actualisardb();
+            Cleralltxtbox();
         }
 
         private void label13_Click_1(object sender, EventArgs e)
@@ -273,6 +291,7 @@ namespace Demo_Form_Proyecto
             cone.Ejecutar(Sql);
             MessageBox.Show("Reporte generado con exito" + textBox4.Text, "LISTO!", MessageBoxButtons.OK);
             Actualisardb();
+            Cleralltxtbox();
         }
         private void Templeado()
         {
@@ -401,6 +420,8 @@ namespace Demo_Form_Proyecto
         private void button2_Click(object sender, EventArgs e)
         {
             ActulvReportes();
+            Cleralltxtbox();
+
         }
         private void llenarlvactu()
         {
@@ -457,6 +478,12 @@ namespace Demo_Form_Proyecto
             cone.Ejecutar(Sql);
             MessageBox.Show("Se elimino el alumno");
             Actualisardb();
+            Cleralltxtbox();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
