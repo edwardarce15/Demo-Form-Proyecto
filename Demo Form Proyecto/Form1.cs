@@ -37,7 +37,6 @@ namespace Demo_Form_Proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             string conexion = "server=69.6.201.17; database=afcbemis_SecundariaTecnica; Uid=afcbemis; pwd=isoft1106.Proyectos;";
             MySqlConnection cn = new MySqlConnection(conexion);
 
@@ -45,31 +44,57 @@ namespace Demo_Form_Proyecto
             {
                 cn.Open();
 
+                string query = @"
+        SELECT f.Funcion
+        FROM cuenta c
+        JOIN empleado e ON c.Empleado_idEmpleado = e.idEmpleado
+        JOIN funcion f ON e.Funcion_idFuncion = f.idFuncion
+        WHERE c.Cuenta = @Cuenta AND c.Contraseña = @Contraseña";
 
-                string query = "SELECT COUNT(*) FROM cuenta WHERE Cuenta=@Cuenta AND Contraseña=@Contraseña";
                 using (MySqlCommand cmd = new MySqlCommand(query, cn))
                 {
                     cmd.Parameters.AddWithValue("@Cuenta", textBox1.Text);
                     cmd.Parameters.AddWithValue("@Contraseña", textBox2.Text);
 
-                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    object result = cmd.ExecuteScalar();
 
-                    if (count > 0)
+                    if (result != null)
                     {
-                        MessageBox.Show("Bienvenido " + textBox1.Text,
-                                        "Acceso concedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string funcion = result.ToString().Trim().ToLower();
 
+                        switch (funcion)
+                        {
+                            case "director":
+                                MessageBox.Show("Bienvenido Director");
+                                break;
 
+                            case "prefecto":
+                                MessageBox.Show("Bienvenido Prefecto");
+                                break;
 
+                            case "trabajador social":
+                                MessageBox.Show("Bienvenido Trabajador Social");
+                                break;
+
+                            case "maestro":
+                                MessageBox.Show("Bienvenido Maestro");
+                                break;
+
+                            default:
+                                MessageBox.Show("Función desconocida: " + funcion);
+                                break;
+                        }
+
+                       
+                        this.Hide();
+                        Interfaz_principal Interf = new Interfaz_principal();
+                        Interf.Show();
                     }
                     else
                     {
-                        MessageBox.Show(" Cuenta o Contraseña incorrectos.",
-                                        "Error de acceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Cuenta o Contraseña incorrectos.",
+                                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    this.Hide();
-                    Interfaz_principal Interf = new Interfaz_principal();
-                    Interf.Show();
                 }
             }
             catch (Exception ex)
@@ -81,6 +106,7 @@ namespace Demo_Form_Proyecto
                 cn.Close();
             }
         }
+        
 
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
