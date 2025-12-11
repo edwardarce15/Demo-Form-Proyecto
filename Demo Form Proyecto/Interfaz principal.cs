@@ -485,5 +485,10 @@ namespace Demo_Form_Proyecto
         {
             Application.Exit();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            llenarlvactu();
+        }
     }
 }

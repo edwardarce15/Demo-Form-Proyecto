@@ -22,7 +22,7 @@ namespace Demo_Form_Proyecto
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Normal;
         }
 
         private void label2_Click(object sender, EventArgs e)

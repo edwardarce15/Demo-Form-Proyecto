@@ -134,6 +134,7 @@
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button2 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -974,6 +975,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.button11);
             this.panel4.Controls.Add(this.TxtNombre);
             this.panel4.Controls.Add(this.BtnConRep);
             this.panel4.Controls.Add(this.label22);
@@ -1197,6 +1199,18 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(528, 101);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(127, 42);
+            this.button11.TabIndex = 52;
+            this.button11.Text = "Mostrar todos";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // Interfaz_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1350,5 +1364,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader24;
         private System.Windows.Forms.ColumnHeader columnHeader25;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button11;
     }
 }
