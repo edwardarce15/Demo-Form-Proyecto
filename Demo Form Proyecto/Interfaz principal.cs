@@ -305,25 +305,12 @@ namespace Demo_Form_Proyecto
         }
         private void llenarlvAlumnos()
         {
-            lVAlumnos.View = View.Details;
-            lVAlumnos.FullRowSelect = true;
-            lVAlumnos.GridLines = true;
-
-            lVAlumnos.Columns.Add("ID", 50);
-            lVAlumnos.Columns.Add("Alumno", 150);
-            lVAlumnos.Columns.Add("Matrícula", 100);
-            lVAlumnos.Columns.Add("Tutor", 150);
-            lVAlumnos.Columns.Add("Tel. Tutor", 120);
-            lVAlumnos.Columns.Add("Grado", 70);
-            lVAlumnos.Columns.Add("Grupo", 70);
-            lVAlumnos.Columns.Add("Turno", 80);
             Clsconexion cone = new Clsconexion();
             DataTable dt3 = cone.Desplegar("SELECT * FROM vista_alumnos order BY NombreAlumnos");
             lVAlumnos.Items.Clear();
             foreach (DataRow row in dt3.Rows)
             {
-                ListViewItem item = new ListViewItem(row["idAlumnos"].ToString());
-                item.SubItems.Add(row["NombreAlumnos"].ToString());
+                ListViewItem item = new ListViewItem(row["NombreAlumnos"].ToString());
                 item.SubItems.Add(row["Matricula"].ToString());
                 item.SubItems.Add(row["NombreTutor"].ToString());
                 item.SubItems.Add(row["Tel_Tutor"].ToString());
@@ -359,22 +346,9 @@ namespace Demo_Form_Proyecto
         {
             Clsconexion cone = new Clsconexion();
             DataTable dt = cone.Desplegar("SELECT * FROM vista_alumnos order BY NombreAlumnos");
-            lVAlumno.View = View.Details;
-            lVAlumno.FullRowSelect = true;
-            lVAlumno.GridLines = true;
-            lVAlumno.Columns.Add("ID", 70);
-            lVAlumno.Columns.Add("Nombre del Alumno", 180);
-            lVAlumno.Columns.Add("Matrícula", 120);
-            lVAlumno.Columns.Add("Tutor", 150);
-            lVAlumno.Columns.Add("Tel. Tutor", 120);
-            lVAlumno.Columns.Add("Grado", 100);
-            lVAlumno.Columns.Add("Grupo", 100);
-            lVAlumno.Columns.Add("Turno", 100);
-            lVAlumno.Items.Clear();
             foreach (DataRow row in dt.Rows)
             {
-                ListViewItem item = new ListViewItem(row["idAlumnos"].ToString());
-                item.SubItems.Add(row["NombreAlumnos"].ToString());
+                ListViewItem item = new ListViewItem(row["NombreAlumnos"].ToString());
                 item.SubItems.Add(row["Matricula"].ToString());
                 item.SubItems.Add(row["NombreTutor"].ToString());
                 item.SubItems.Add(row["Tel_Tutor"].ToString());
@@ -432,18 +406,6 @@ namespace Demo_Form_Proyecto
         {
             Clsconexion cone = new Clsconexion();
             DataTable dt = cone.Desplegar("SELECT * FROM vista_reportes_detallado order BY FechaReporte DESC");
-            LVReportes.View = View.Details;
-            LVReportes.FullRowSelect = true;
-            LVReportes.GridLines = true;
-            LVReportes.Columns.Add("ID Reporte", 80);
-            LVReportes.Columns.Add("Fecha del Reporte", 150);
-            LVReportes.Columns.Add("Alumno", 150);
-            LVReportes.Columns.Add("Grado", 70);
-            LVReportes.Columns.Add("Grupo", 70);
-            LVReportes.Columns.Add("Empleado", 150);
-            LVReportes.Columns.Add("Tipo de Falta", 120);
-            LVReportes.Columns.Add("Descripción", 200);
-            LVReportes.Items.Clear();
             foreach (DataRow row in dt.Rows)
             {
                 ListViewItem item = new ListViewItem(row["idReporte"].ToString());
@@ -459,12 +421,6 @@ namespace Demo_Form_Proyecto
         }
         private void llenlvempleados()
         {
-            listView2.View = View.Details;
-            listView2.FullRowSelect = true;
-            listView2.GridLines = true;
-            listView2.Columns.Add("Numero", 150);
-            listView2.Columns.Add("Empleado", 100);
-            listView2.Columns.Add("Función", 150);
             Clsconexion cone = new Clsconexion();
             DataTable dt3 = cone.Desplegar("SELECT NombreEmpleado,NumEmpleado,Funcion FROM vistaEmpleados order BY NombreEmpleado");
             listView2.Items.Clear();
@@ -497,7 +453,7 @@ namespace Demo_Form_Proyecto
         private void button9_Click(object sender, EventArgs e)
         {
             Clsconexion cone = new Clsconexion();
-            string Sql = "DELETE FROM empleado WHERE Matricula =" + TxtMatricula.Text;
+            string Sql = "DELETE FROM alumnos WHERE Matricula =" + TxtMatricula.Text;
             cone.Ejecutar(Sql);
             MessageBox.Show("Se elimino el alumno");
             Actualisardb();

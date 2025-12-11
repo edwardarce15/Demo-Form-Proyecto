@@ -102,12 +102,37 @@
             this.label38 = new System.Windows.Forms.Label();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnConRep = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.LVReportes = new System.Windows.Forms.ListView();
             this.label21 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -139,7 +164,7 @@
             this.label1.Location = new System.Drawing.Point(94, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 22);
+            this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "USUARIO";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -165,7 +190,7 @@
             this.label2.Location = new System.Drawing.Point(255, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(650, 22);
+            this.label2.Size = new System.Drawing.Size(510, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "SISTEMA DE GESTION DICIPLINAR PARA PARSONAS AUTORISADO";
             // 
@@ -225,7 +250,7 @@
             this.label3.Location = new System.Drawing.Point(255, 40);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(295, 22);
+            this.label3.Size = new System.Drawing.Size(238, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Escuela Secundaria Tecnica 33";
             // 
@@ -270,7 +295,7 @@
             this.label24.Location = new System.Drawing.Point(102, 81);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(99, 15);
+            this.label24.Size = new System.Drawing.Size(84, 13);
             this.label24.TabIndex = 46;
             this.label24.Text = "Falta del alumno";
             // 
@@ -280,7 +305,7 @@
             this.label23.Location = new System.Drawing.Point(14, 84);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(74, 15);
+            this.label23.Size = new System.Drawing.Size(66, 13);
             this.label23.TabIndex = 45;
             this.label23.Text = "Tipo de falta";
             // 
@@ -302,6 +327,14 @@
             // 
             // lVAlumno
             // 
+            this.lVAlumno.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7});
             this.lVAlumno.HideSelection = false;
             this.lVAlumno.Location = new System.Drawing.Point(11, 139);
             this.lVAlumno.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -348,7 +381,7 @@
             this.label30.Location = new System.Drawing.Point(387, 35);
             this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(86, 15);
+            this.label30.Size = new System.Drawing.Size(75, 13);
             this.label30.TabIndex = 37;
             this.label30.Text = "Generado por:";
             // 
@@ -359,7 +392,7 @@
             this.label15.Location = new System.Drawing.Point(280, 12);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(133, 17);
+            this.label15.Size = new System.Drawing.Size(105, 14);
             this.label15.TabIndex = 16;
             this.label15.Text = "Generar Reporte";
             // 
@@ -369,7 +402,7 @@
             this.label8.Location = new System.Drawing.Point(439, 11);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 15);
+            this.label8.Size = new System.Drawing.Size(66, 13);
             this.label8.TabIndex = 15;
             this.label8.Text = "Tipo de falta";
             // 
@@ -379,7 +412,7 @@
             this.label7.Location = new System.Drawing.Point(372, 31);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 15);
+            this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 12;
             // 
             // label6
@@ -388,7 +421,7 @@
             this.label6.Location = new System.Drawing.Point(165, 31);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 15);
+            this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 11;
             this.label6.Text = "Nombre/s";
             // 
@@ -398,7 +431,7 @@
             this.label5.Location = new System.Drawing.Point(9, 31);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 15);
+            this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Grado";
             // 
@@ -408,7 +441,7 @@
             this.label4.Location = new System.Drawing.Point(86, 31);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 15);
+            this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Grupo";
             // 
@@ -464,6 +497,10 @@
             // 
             // listView2
             // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17});
             this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(27, 150);
             this.listView2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -471,6 +508,7 @@
             this.listView2.Size = new System.Drawing.Size(668, 241);
             this.listView2.TabIndex = 16;
             this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
             // 
             // label14
             // 
@@ -479,7 +517,7 @@
             this.label14.Location = new System.Drawing.Point(255, 12);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(138, 17);
+            this.label14.Size = new System.Drawing.Size(110, 14);
             this.label14.TabIndex = 15;
             this.label14.Text = "Registrar Usuario";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -514,7 +552,7 @@
             this.label11.Location = new System.Drawing.Point(13, 79);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(91, 15);
+            this.label11.Size = new System.Drawing.Size(76, 13);
             this.label11.TabIndex = 11;
             this.label11.Text = "NumEmpleado";
             // 
@@ -524,7 +562,7 @@
             this.label12.Location = new System.Drawing.Point(470, 38);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(135, 15);
+            this.label12.Size = new System.Drawing.Size(116, 13);
             this.label12.TabIndex = 9;
             this.label12.Text = "Nivel de administracion";
             // 
@@ -543,7 +581,7 @@
             this.label10.Location = new System.Drawing.Point(206, 38);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 15);
+            this.label10.Size = new System.Drawing.Size(0, 13);
             this.label10.TabIndex = 6;
             // 
             // label9
@@ -552,7 +590,7 @@
             this.label9.Location = new System.Drawing.Point(10, 38);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 15);
+            this.label9.Size = new System.Drawing.Size(112, 13);
             this.label9.TabIndex = 5;
             this.label9.Text = "Nombre/s y Apellido/s";
             // 
@@ -621,7 +659,7 @@
             this.label35.Location = new System.Drawing.Point(248, 12);
             this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(107, 17);
+            this.label35.Size = new System.Drawing.Size(84, 14);
             this.label35.TabIndex = 19;
             this.label35.Text = "Crear Cuenta";
             // 
@@ -632,7 +670,7 @@
             this.checkBox1.Location = new System.Drawing.Point(353, 157);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(173, 21);
+            this.checkBox1.Size = new System.Drawing.Size(136, 17);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "Mostrar Contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -645,7 +683,7 @@
             this.label34.Location = new System.Drawing.Point(227, 183);
             this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(162, 17);
+            this.label34.Size = new System.Drawing.Size(126, 13);
             this.label34.TabIndex = 7;
             this.label34.Text = "confirmar contraseña";
             // 
@@ -656,7 +694,7 @@
             this.label33.Location = new System.Drawing.Point(242, 142);
             this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(91, 17);
+            this.label33.Size = new System.Drawing.Size(71, 13);
             this.label33.TabIndex = 6;
             this.label33.Text = "Contraseña";
             // 
@@ -667,7 +705,7 @@
             this.label32.Location = new System.Drawing.Point(238, 51);
             this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(146, 17);
+            this.label32.Size = new System.Drawing.Size(113, 13);
             this.label32.TabIndex = 5;
             this.label32.Text = "Nombre de usuario";
             // 
@@ -678,7 +716,7 @@
             this.label31.Location = new System.Drawing.Point(257, 96);
             this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(64, 17);
+            this.label31.Size = new System.Drawing.Size(50, 13);
             this.label31.TabIndex = 4;
             this.label31.Text = "Usuario";
             // 
@@ -688,7 +726,7 @@
             this.textBox17.Location = new System.Drawing.Point(217, 203);
             this.textBox17.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(133, 23);
+            this.textBox17.Size = new System.Drawing.Size(133, 20);
             this.textBox17.TabIndex = 3;
             // 
             // textBox16
@@ -697,7 +735,7 @@
             this.textBox16.Location = new System.Drawing.Point(218, 157);
             this.textBox16.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(132, 23);
+            this.textBox16.Size = new System.Drawing.Size(132, 20);
             this.textBox16.TabIndex = 2;
             this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
@@ -707,7 +745,7 @@
             this.textBox15.Location = new System.Drawing.Point(184, 75);
             this.textBox15.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(198, 23);
+            this.textBox15.Size = new System.Drawing.Size(198, 20);
             this.textBox15.TabIndex = 1;
             this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
@@ -718,7 +756,7 @@
             this.label16.Location = new System.Drawing.Point(254, 12);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(128, 17);
+            this.label16.Size = new System.Drawing.Size(103, 14);
             this.label16.TabIndex = 17;
             this.label16.Text = "Agregar Alumno";
             // 
@@ -736,7 +774,7 @@
             this.label17.Location = new System.Drawing.Point(27, 32);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(106, 15);
+            this.label17.Size = new System.Drawing.Size(90, 13);
             this.label17.TabIndex = 19;
             this.label17.Text = "Nombre completo";
             // 
@@ -755,7 +793,7 @@
             this.label18.Location = new System.Drawing.Point(370, 38);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(41, 15);
+            this.label18.Size = new System.Drawing.Size(36, 13);
             this.label18.TabIndex = 21;
             this.label18.Text = "Grado";
             // 
@@ -774,7 +812,7 @@
             this.label19.Location = new System.Drawing.Point(475, 38);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(41, 15);
+            this.label19.Size = new System.Drawing.Size(36, 13);
             this.label19.TabIndex = 23;
             this.label19.Text = "Grupo";
             // 
@@ -792,7 +830,7 @@
             this.label20.Location = new System.Drawing.Point(27, 81);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(58, 15);
+            this.label20.Size = new System.Drawing.Size(50, 13);
             this.label20.TabIndex = 25;
             this.label20.Text = "Matricula";
             // 
@@ -822,6 +860,14 @@
             // 
             // lVAlumnos
             // 
+            this.lVAlumnos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14});
             this.lVAlumnos.HideSelection = false;
             this.lVAlumnos.Location = new System.Drawing.Point(27, 175);
             this.lVAlumnos.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -829,6 +875,7 @@
             this.lVAlumnos.Size = new System.Drawing.Size(566, 121);
             this.lVAlumnos.TabIndex = 28;
             this.lVAlumnos.UseCompatibleStateImageBehavior = false;
+            this.lVAlumnos.View = System.Windows.Forms.View.Details;
             this.lVAlumnos.SelectedIndexChanged += new System.EventHandler(this.lVAlumnos_SelectedIndexChanged);
             // 
             // textBox14
@@ -845,7 +892,7 @@
             this.label36.Location = new System.Drawing.Point(26, 120);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(99, 15);
+            this.label36.Size = new System.Drawing.Size(85, 13);
             this.label36.TabIndex = 30;
             this.label36.Text = "Nombre del tutor";
             // 
@@ -863,7 +910,7 @@
             this.label13.Location = new System.Drawing.Point(327, 81);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 15);
+            this.label13.Size = new System.Drawing.Size(90, 13);
             this.label13.TabIndex = 32;
             this.label13.Text = "Telefono del tutor";
             this.label13.Click += new System.EventHandler(this.label13_Click_1);
@@ -874,7 +921,7 @@
             this.label37.Location = new System.Drawing.Point(191, 82);
             this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(0, 15);
+            this.label37.Size = new System.Drawing.Size(0, 13);
             this.label37.TabIndex = 34;
             // 
             // panel3
@@ -911,7 +958,7 @@
             this.label38.Location = new System.Drawing.Point(172, 79);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(39, 15);
+            this.label38.Size = new System.Drawing.Size(35, 13);
             this.label38.TabIndex = 36;
             this.label38.Text = "Turno";
             // 
@@ -932,17 +979,24 @@
             this.panel4.Controls.Add(this.LVReportes);
             this.panel4.Controls.Add(this.label21);
             this.panel4.Location = new System.Drawing.Point(144, 110);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(844, 429);
             this.panel4.TabIndex = 18;
             this.panel4.Visible = false;
             // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Location = new System.Drawing.Point(59, 130);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(269, 20);
+            this.TxtNombre.TabIndex = 51;
+            // 
             // BtnConRep
             // 
             this.BtnConRep.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConRep.Location = new System.Drawing.Point(393, 103);
-            this.BtnConRep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnConRep.Margin = new System.Windows.Forms.Padding(2);
             this.BtnConRep.Name = "BtnConRep";
             this.BtnConRep.Size = new System.Drawing.Size(127, 42);
             this.BtnConRep.TabIndex = 50;
@@ -956,13 +1010,22 @@
             this.label22.Location = new System.Drawing.Point(70, 100);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(61, 15);
+            this.label22.Size = new System.Drawing.Size(54, 13);
             this.label22.TabIndex = 48;
             this.label22.Text = "Nombre/s";
             this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // LVReportes
             // 
+            this.LVReportes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader18,
+            this.columnHeader19,
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader25});
             this.LVReportes.HideSelection = false;
             this.LVReportes.Location = new System.Drawing.Point(40, 192);
             this.LVReportes.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -980,7 +1043,7 @@
             this.label21.Location = new System.Drawing.Point(244, 20);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(142, 17);
+            this.label21.Size = new System.Drawing.Size(113, 14);
             this.label21.TabIndex = 17;
             this.label21.Text = "Consultar Reporte";
             // 
@@ -988,7 +1051,7 @@
             // 
             this.button10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(15, 157);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(99, 42);
             this.button10.TabIndex = 19;
@@ -996,12 +1059,130 @@
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // TxtNombre
+            // columnHeader1
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(59, 130);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(269, 20);
-            this.TxtNombre.TabIndex = 51;
+            this.columnHeader1.Text = "Alumno";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Matricula";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tutor";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Tel. Tutor";
+            this.columnHeader4.Width = 120;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Grado";
+            this.columnHeader5.Width = 70;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Grupo";
+            this.columnHeader6.Width = 70;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Turno";
+            this.columnHeader7.Width = 80;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Alumno";
+            this.columnHeader8.Width = 150;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Matricula";
+            this.columnHeader9.Width = 100;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Tutor";
+            this.columnHeader10.Width = 150;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Tel.Tutor";
+            this.columnHeader11.Width = 120;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Grado";
+            this.columnHeader12.Width = 70;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Grupo";
+            this.columnHeader13.Width = 70;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Turno";
+            this.columnHeader14.Width = 80;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Numero";
+            this.columnHeader15.Width = 150;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Empleado";
+            this.columnHeader16.Width = 100;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Funcion";
+            this.columnHeader17.Width = 80;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "ID Reporte";
+            this.columnHeader18.Width = 80;
+            // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Fecha Reporte";
+            this.columnHeader19.Width = 150;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "Alumno";
+            this.columnHeader20.Width = 150;
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Grado";
+            this.columnHeader21.Width = 70;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "Grupo";
+            this.columnHeader22.Width = 70;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Empleado";
+            this.columnHeader23.Width = 150;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Tipo de falta";
+            this.columnHeader24.Width = 120;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Descripcion";
+            this.columnHeader25.Width = 200;
             // 
             // Interfaz_principal
             // 
@@ -1129,5 +1310,30 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.DateTimePicker Genfecha;
         private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
     }
 }
