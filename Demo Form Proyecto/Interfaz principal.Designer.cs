@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Interfaz_principal));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,6 +45,13 @@
             this.TxtFalta = new System.Windows.Forms.TextBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.lVAlumno = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.button12 = new System.Windows.Forms.Button();
@@ -59,6 +67,9 @@
             this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label14 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -93,6 +104,13 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.lVAlumnos = new System.Windows.Forms.ListView();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -102,29 +120,11 @@
             this.label38 = new System.Windows.Forms.Label();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.BtnConRep = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.LVReportes = new System.Windows.Forms.ListView();
-            this.label21 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -133,8 +133,9 @@
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label21 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -276,10 +277,10 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Location = new System.Drawing.Point(133, 143);
+            this.panel1.Location = new System.Drawing.Point(135, 115);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(810, 407);
+            this.panel1.Size = new System.Drawing.Size(869, 407);
             this.panel1.TabIndex = 11;
             this.panel1.Visible = false;
             // 
@@ -345,6 +346,41 @@
             this.lVAlumno.TabIndex = 40;
             this.lVAlumno.UseCompatibleStateImageBehavior = false;
             this.lVAlumno.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Alumno";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Matricula";
+            this.columnHeader2.Width = 100;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Tutor";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Tel. Tutor";
+            this.columnHeader4.Width = 120;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Grado";
+            this.columnHeader5.Width = 70;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Grupo";
+            this.columnHeader6.Width = 70;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Turno";
+            this.columnHeader7.Width = 80;
             // 
             // comboBox12
             // 
@@ -490,10 +526,10 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Location = new System.Drawing.Point(171, 116);
+            this.panel2.Location = new System.Drawing.Point(133, 115);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(793, 444);
+            this.panel2.Size = new System.Drawing.Size(854, 444);
             this.panel2.TabIndex = 16;
             this.panel2.Visible = false;
             // 
@@ -511,6 +547,21 @@
             this.listView2.TabIndex = 16;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Numero";
+            this.columnHeader15.Width = 150;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Empleado";
+            this.columnHeader16.Width = 100;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Funcion";
+            this.columnHeader17.Width = 80;
             // 
             // label14
             // 
@@ -626,10 +677,10 @@
             this.panel5.Controls.Add(this.textBox17);
             this.panel5.Controls.Add(this.textBox16);
             this.panel5.Controls.Add(this.textBox15);
-            this.panel5.Location = new System.Drawing.Point(158, 125);
+            this.panel5.Location = new System.Drawing.Point(123, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(766, 414);
+            this.panel5.Size = new System.Drawing.Size(600, 414);
             this.panel5.TabIndex = 17;
             // 
             // button13
@@ -820,7 +871,7 @@
             // 
             // TxtMatricula
             // 
-            this.TxtMatricula.Location = new System.Drawing.Point(27, 98);
+            this.TxtMatricula.Location = new System.Drawing.Point(709, 54);
             this.TxtMatricula.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.TxtMatricula.Name = "TxtMatricula";
             this.TxtMatricula.Size = new System.Drawing.Size(129, 20);
@@ -829,7 +880,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(27, 81);
+            this.label20.Location = new System.Drawing.Point(706, 40);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(50, 13);
@@ -839,7 +890,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(374, 131);
+            this.button4.Location = new System.Drawing.Point(569, 133);
             this.button4.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(114, 34);
@@ -851,7 +902,7 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(492, 131);
+            this.button9.Location = new System.Drawing.Point(687, 131);
             this.button9.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(114, 34);
@@ -874,11 +925,46 @@
             this.lVAlumnos.Location = new System.Drawing.Point(27, 175);
             this.lVAlumnos.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.lVAlumnos.Name = "lVAlumnos";
-            this.lVAlumnos.Size = new System.Drawing.Size(566, 121);
+            this.lVAlumnos.Size = new System.Drawing.Size(742, 187);
             this.lVAlumnos.TabIndex = 28;
             this.lVAlumnos.UseCompatibleStateImageBehavior = false;
             this.lVAlumnos.View = System.Windows.Forms.View.Details;
             this.lVAlumnos.SelectedIndexChanged += new System.EventHandler(this.lVAlumnos_SelectedIndexChanged);
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Alumno";
+            this.columnHeader8.Width = 150;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Matricula";
+            this.columnHeader9.Width = 100;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Tutor";
+            this.columnHeader10.Width = 150;
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Tel.Tutor";
+            this.columnHeader11.Width = 120;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Grado";
+            this.columnHeader12.Width = 70;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Grupo";
+            this.columnHeader13.Width = 70;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Turno";
+            this.columnHeader14.Width = 80;
             // 
             // textBox14
             // 
@@ -900,7 +986,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(327, 98);
+            this.textBox7.Location = new System.Drawing.Point(373, 139);
             this.textBox7.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(129, 20);
@@ -909,7 +995,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(327, 81);
+            this.label13.Location = new System.Drawing.Point(373, 122);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(90, 13);
@@ -947,17 +1033,17 @@
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.label16);
-            this.panel3.Location = new System.Drawing.Point(145, 135);
+            this.panel3.Location = new System.Drawing.Point(135, 115);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(781, 391);
+            this.panel3.Size = new System.Drawing.Size(840, 391);
             this.panel3.TabIndex = 16;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(172, 79);
+            this.label38.Location = new System.Drawing.Point(578, 35);
             this.label38.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(35, 13);
@@ -967,7 +1053,7 @@
             // comboBox13
             // 
             this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(175, 98);
+            this.comboBox13.Location = new System.Drawing.Point(581, 53);
             this.comboBox13.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(116, 21);
@@ -981,12 +1067,25 @@
             this.panel4.Controls.Add(this.label22);
             this.panel4.Controls.Add(this.LVReportes);
             this.panel4.Controls.Add(this.label21);
-            this.panel4.Location = new System.Drawing.Point(144, 110);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(133, 115);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(844, 429);
+            this.panel4.Size = new System.Drawing.Size(858, 429);
             this.panel4.TabIndex = 18;
             this.panel4.Visible = false;
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(528, 101);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(127, 42);
+            this.button11.TabIndex = 52;
+            this.button11.Text = "Mostrar todos";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // TxtNombre
             // 
@@ -1039,114 +1138,6 @@
             this.LVReportes.View = System.Windows.Forms.View.Details;
             this.LVReportes.SelectedIndexChanged += new System.EventHandler(this.LVReportes_SelectedIndexChanged);
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(244, 20);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(113, 14);
-            this.label21.TabIndex = 17;
-            this.label21.Text = "Consultar Reporte";
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(15, 157);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(99, 42);
-            this.button10.TabIndex = 19;
-            this.button10.Text = "Consultar Reporte ";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Alumno";
-            this.columnHeader1.Width = 150;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Matricula";
-            this.columnHeader2.Width = 100;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Tutor";
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Tel. Tutor";
-            this.columnHeader4.Width = 120;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Grado";
-            this.columnHeader5.Width = 70;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Grupo";
-            this.columnHeader6.Width = 70;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Turno";
-            this.columnHeader7.Width = 80;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Alumno";
-            this.columnHeader8.Width = 150;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Matricula";
-            this.columnHeader9.Width = 100;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Tutor";
-            this.columnHeader10.Width = 150;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Tel.Tutor";
-            this.columnHeader11.Width = 120;
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "Grado";
-            this.columnHeader12.Width = 70;
-            // 
-            // columnHeader13
-            // 
-            this.columnHeader13.Text = "Grupo";
-            this.columnHeader13.Width = 70;
-            // 
-            // columnHeader14
-            // 
-            this.columnHeader14.Text = "Turno";
-            this.columnHeader14.Width = 80;
-            // 
-            // columnHeader15
-            // 
-            this.columnHeader15.Text = "Numero";
-            this.columnHeader15.Width = 150;
-            // 
-            // columnHeader16
-            // 
-            this.columnHeader16.Text = "Empleado";
-            this.columnHeader16.Width = 100;
-            // 
-            // columnHeader17
-            // 
-            this.columnHeader17.Text = "Funcion";
-            this.columnHeader17.Width = 80;
-            // 
             // columnHeader18
             // 
             this.columnHeader18.Text = "ID Reporte";
@@ -1187,6 +1178,29 @@
             this.columnHeader25.Text = "Descripcion";
             this.columnHeader25.Width = 200;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(244, 20);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(113, 14);
+            this.label21.TabIndex = 17;
+            this.label21.Text = "Consultar Reporte";
+            // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(15, 157);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(99, 42);
+            this.button10.TabIndex = 19;
+            this.button10.Text = "Consultar Reporte ";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1198,18 +1212,6 @@
             this.button2.Text = "SALIR";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(528, 101);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(127, 42);
-            this.button11.TabIndex = 52;
-            this.button11.Text = "Mostrar todos";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // Interfaz_principal
             // 
@@ -1229,12 +1231,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.MaximizeBox = false;
             this.Name = "Interfaz_principal";
             this.Text = "Inicio - Interfaz";
             this.Load += new System.EventHandler(this.Interfaz_principal_Load);
